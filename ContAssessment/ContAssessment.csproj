@@ -1,0 +1,210 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7A94FBC9-5B6B-42A6-BF82-E5D4597E1034}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ContAssessment</RootNamespace>
+    <AssemblyName>ContAssessment</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="difficulty.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="difficulty.Designer.cs">
+      <DependentUpon>difficulty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="easyDND.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="easyDND.Designer.cs">
+      <DependentUpon>easyDND.cs</DependentUpon>
+    </Compile>
+    <Compile Include="easyRB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="easyRB.Designer.cs">
+      <DependentUpon>easyRB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="easyCB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="easyCB.Designer.cs">
+      <DependentUpon>easyCB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="endscreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="endscreen.Designer.cs">
+      <DependentUpon>endscreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="globaldata.cs" />
+    <Compile Include="hardCB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="hardCB.Designer.cs">
+      <DependentUpon>hardCB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="hardRB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="hardRB.Designer.cs">
+      <DependentUpon>hardRB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Homescreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Homescreen.Designer.cs">
+      <DependentUpon>Homescreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="leaderboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="leaderboard.Designer.cs">
+      <DependentUpon>leaderboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mystatic.cs" />
+    <Compile Include="normalCB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="normalCB.Designer.cs">
+      <DependentUpon>normalCB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="normalRB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="normalRB.Designer.cs">
+      <DependentUpon>normalRB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Playerdata.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="difficulty.resx">
+      <DependentUpon>difficulty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="easyDND.resx">
+      <DependentUpon>easyDND.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="easyRB.resx">
+      <DependentUpon>easyRB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="easyCB.resx">
+      <DependentUpon>easyCB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="endscreen.resx">
+      <DependentUpon>endscreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="hardCB.resx">
+      <DependentUpon>hardCB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="hardRB.resx">
+      <DependentUpon>hardRB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Homescreen.resx">
+      <DependentUpon>Homescreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="normalCB.resx">
+      <DependentUpon>normalCB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="normalRB.resx">
+      <DependentUpon>normalRB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\health-bar-final-FINAL-FINAL--easy.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\health-bar-final-FINAL-FINAL--easy---4-lives.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\health-bar-final-FINAL-FINAL--easy---3-lives.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\health-bar-final-FINAL-FINAL--easy-2-lives.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\health-bar-final-FINAL-FINAL--easy--1-life.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\no-health.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\detonation-time.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\detonation-time-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\south africa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\columbia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bangladesh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\italy.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
