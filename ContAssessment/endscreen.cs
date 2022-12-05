@@ -24,7 +24,7 @@ namespace ContAssessment
 
         private void btnLead_Click(object sender, EventArgs e)
         {
-            leaderboard lead1 = new leaderboard();
+            lead lead1 = new lead();
             this.Hide();
             lead1.Show();
         }

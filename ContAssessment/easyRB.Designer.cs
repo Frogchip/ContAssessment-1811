@@ -54,6 +54,8 @@ namespace ContAssessment
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.btnHome = new System.Windows.Forms.Button();
+            this.btnQuit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Health1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Health2)).BeginInit();
@@ -217,11 +219,10 @@ namespace ContAssessment
             this.lblEScore.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(13)))), ((int)(((byte)(31)))));
             this.lblEScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEScore.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.lblEScore.Location = new System.Drawing.Point(536, 488);
+            this.lblEScore.Location = new System.Drawing.Point(558, 485);
             this.lblEScore.Name = "lblEScore";
-            this.lblEScore.Size = new System.Drawing.Size(191, 39);
+            this.lblEScore.Size = new System.Drawing.Size(0, 39);
             this.lblEScore.TabIndex = 13;
-            this.lblEScore.Text = "labelScore";
             // 
             // pictureBox1
             // 
@@ -240,12 +241,13 @@ namespace ContAssessment
             this.Health1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(13)))), ((int)(((byte)(31)))));
             this.Health1.BackgroundImage = global::ContAssessment.Properties.Resources.health_bar_final_FINAL_FINAL__easy;
             this.Health1.Image = global::ContAssessment.Properties.Resources.health_bar_final_FINAL_FINAL__easy;
-            this.Health1.Location = new System.Drawing.Point(0, 0);
+            this.Health1.Location = new System.Drawing.Point(24, 0);
             this.Health1.Name = "Health1";
             this.Health1.Size = new System.Drawing.Size(1069, 562);
             this.Health1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Health1.TabIndex = 12;
             this.Health1.TabStop = false;
+            this.Health1.Click += new System.EventHandler(this.Health1_Click);
             // 
             // Health2
             // 
@@ -301,7 +303,6 @@ namespace ContAssessment
             this.lblEQCount.Name = "lblEQCount";
             this.lblEQCount.Size = new System.Drawing.Size(119, 44);
             this.lblEQCount.TabIndex = 19;
-            this.lblEQCount.Text = "label1";
             // 
             // pictureBox2
             // 
@@ -347,6 +348,33 @@ namespace ContAssessment
             this.pictureBox5.TabStop = false;
             this.pictureBox5.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox5_MouseClick);
             // 
+            // btnHome
+            // 
+            this.btnHome.BackColor = System.Drawing.Color.Crimson;
+            this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHome.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnHome.Location = new System.Drawing.Point(934, 506);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.Size = new System.Drawing.Size(123, 44);
+            this.btnHome.TabIndex = 24;
+            this.btnHome.Text = "Home";
+            this.btnHome.UseVisualStyleBackColor = false;
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
+            // 
+            // btnQuit
+            // 
+            this.btnQuit.BackColor = System.Drawing.Color.Crimson;
+            this.btnQuit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnQuit.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQuit.Location = new System.Drawing.Point(12, 506);
+            this.btnQuit.Name = "btnQuit";
+            this.btnQuit.Size = new System.Drawing.Size(118, 44);
+            this.btnQuit.TabIndex = 25;
+            this.btnQuit.Text = "Quit";
+            this.btnQuit.UseVisualStyleBackColor = false;
+            this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
+            // 
             // easyRB
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -354,6 +382,8 @@ namespace ContAssessment
             this.BackgroundImage = global::ContAssessment.Properties.Resources.health_bar_final_FINAL_FINAL__easy___3_lives;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1069, 562);
+            this.Controls.Add(this.btnQuit);
+            this.Controls.Add(this.btnHome);
             this.Controls.Add(this.lblEQCount);
             this.Controls.Add(this.lblEScore);
             this.Controls.Add(this.lblTime);
@@ -422,5 +452,7 @@ namespace ContAssessment
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.Button btnHome;
+        private System.Windows.Forms.Button btnQuit;
     }
 }

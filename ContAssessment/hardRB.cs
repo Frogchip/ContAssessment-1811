@@ -67,13 +67,14 @@ namespace ContAssessment
         {
             globaldata.HTimeLeft = globaldata.HTimeLeft - 1;
             lblTime.Text = globaldata.HTimeLeft + "";
-            lblHQCount.Text = globaldata.HCount + "";
+            lblHQCount.Text = globaldata.HCount + "/20";
             if (globaldata.HTimeLeft == 0)
             {
                 timer1.Stop();
                 lblTime.Visible = false;
                 globaldata.HCount++;
                 MessageBox.Show("Out of time!");
+                globaldata.HLife -= 2;
                 this.Hide();
                 globaldata.HLife = globaldata.HLife + 1;
                 if (globaldata.HLife == 1)
@@ -84,8 +85,7 @@ namespace ContAssessment
                 if (globaldata.HLife == 2)
                 {
                     timer1.Stop();
-                    endscreen end1 = new endscreen();
-                    end1.Show();
+                    this.Hide();
                 }
             }
         }
@@ -110,7 +110,7 @@ namespace ContAssessment
                 timer1.Stop();
                 lblTime.Visible = false;
                 MessageBox.Show("Incorrect!");
-                globaldata.Score-=2;
+                globaldata.Score--;
                 this.Hide();
                 globaldata.HLife = globaldata.HLife + 1;
                 if (globaldata.HLife == 1)
@@ -120,9 +120,7 @@ namespace ContAssessment
                 }
                 if (globaldata.HLife == 2)
                 {
-                    endscreen end1 = new endscreen();
                     this.Hide();
-                    end1.Show();
                 }
             }
             else
@@ -197,6 +195,11 @@ namespace ContAssessment
             rb2.Checked = false;
             rb3.Checked = false;
             rb4.Checked = true;
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

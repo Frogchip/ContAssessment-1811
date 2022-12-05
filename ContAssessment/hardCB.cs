@@ -63,11 +63,12 @@ namespace ContAssessment
             lblHScore.Text = globaldata.Score + "";
             globaldata.HTimeLeft = globaldata.HTimeLeft - 1;
             lblTime.Text = globaldata.HTimeLeft + "";
-            lblHQCount.Text = globaldata.HCount + "";
+            lblHQCount.Text = globaldata.HCount + "/20";
             if (globaldata.HTimeLeft == 0)
             {
                 lblTime.Visible = false;
                 MessageBox.Show("Out of time!");
+                globaldata.HLife -= 2;
                 timer1.Stop();
                 this.Hide();
                 globaldata.HLife = globaldata.HLife + 1;
@@ -110,9 +111,7 @@ namespace ContAssessment
                 }
                 if (globaldata.HLife == 2)
                 {
-                    endscreen end1 = new endscreen();
                     this.Hide();
-                    end1.Show();
                 }
             }
             else
@@ -219,6 +218,19 @@ namespace ContAssessment
             cb2.Checked = false;
             cb3.Checked = true;
             cb4.Checked = false;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            globaldata.Score = 0;
+            difficulty diff1 = new difficulty();
+            this.Hide();
+            diff1.Show();
         }
     }
 }

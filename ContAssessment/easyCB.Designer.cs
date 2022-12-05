@@ -54,6 +54,8 @@ namespace ContAssessment
             this.detonationtime = new System.Windows.Forms.PictureBox();
             this.lblEQCount = new System.Windows.Forms.Label();
             this.lblEScore = new System.Windows.Forms.Label();
+            this.btnHome = new System.Windows.Forms.Button();
+            this.btnQuit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -70,7 +72,7 @@ namespace ContAssessment
             // 
             this.cb1.AutoSize = true;
             this.cb1.BackgroundImage = global::ContAssessment.Properties.Resources.health_bar_final_FINAL_FINAL__easy;
-            this.cb1.Location = new System.Drawing.Point(305, 239);
+            this.cb1.Location = new System.Drawing.Point(198, 224);
             this.cb1.Margin = new System.Windows.Forms.Padding(2);
             this.cb1.Name = "cb1";
             this.cb1.Size = new System.Drawing.Size(15, 14);
@@ -82,7 +84,7 @@ namespace ContAssessment
             // 
             this.cb2.AutoSize = true;
             this.cb2.BackgroundImage = global::ContAssessment.Properties.Resources.health_bar_final_FINAL_FINAL__easy;
-            this.cb2.Location = new System.Drawing.Point(685, 240);
+            this.cb2.Location = new System.Drawing.Point(198, 283);
             this.cb2.Margin = new System.Windows.Forms.Padding(2);
             this.cb2.Name = "cb2";
             this.cb2.Size = new System.Drawing.Size(15, 14);
@@ -94,7 +96,7 @@ namespace ContAssessment
             // 
             this.cb3.AutoSize = true;
             this.cb3.BackgroundImage = global::ContAssessment.Properties.Resources.health_bar_final_FINAL_FINAL__easy;
-            this.cb3.Location = new System.Drawing.Point(305, 345);
+            this.cb3.Location = new System.Drawing.Point(198, 338);
             this.cb3.Margin = new System.Windows.Forms.Padding(2);
             this.cb3.Name = "cb3";
             this.cb3.Size = new System.Drawing.Size(15, 14);
@@ -107,7 +109,7 @@ namespace ContAssessment
             this.cb4.AutoSize = true;
             this.cb4.BackColor = System.Drawing.Color.Transparent;
             this.cb4.BackgroundImage = global::ContAssessment.Properties.Resources.health_bar_final_FINAL_FINAL__easy;
-            this.cb4.Location = new System.Drawing.Point(685, 347);
+            this.cb4.Location = new System.Drawing.Point(198, 396);
             this.cb4.Margin = new System.Windows.Forms.Padding(2);
             this.cb4.Name = "cb4";
             this.cb4.Size = new System.Drawing.Size(15, 14);
@@ -121,7 +123,7 @@ namespace ContAssessment
             this.lblans1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblans1.ForeColor = System.Drawing.Color.Red;
             this.lblans1.Image = global::ContAssessment.Properties.Resources.health_bar_final_FINAL_FINAL__easy__1_life;
-            this.lblans1.Location = new System.Drawing.Point(323, 230);
+            this.lblans1.Location = new System.Drawing.Point(218, 215);
             this.lblans1.Name = "lblans1";
             this.lblans1.Size = new System.Drawing.Size(177, 25);
             this.lblans1.TabIndex = 4;
@@ -134,7 +136,7 @@ namespace ContAssessment
             this.lblans2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblans2.ForeColor = System.Drawing.Color.Red;
             this.lblans2.Image = global::ContAssessment.Properties.Resources.health_bar_final_FINAL_FINAL__easy__1_life;
-            this.lblans2.Location = new System.Drawing.Point(705, 230);
+            this.lblans2.Location = new System.Drawing.Point(218, 274);
             this.lblans2.Name = "lblans2";
             this.lblans2.Size = new System.Drawing.Size(199, 28);
             this.lblans2.TabIndex = 5;
@@ -147,7 +149,7 @@ namespace ContAssessment
             this.lblans3.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblans3.ForeColor = System.Drawing.Color.Red;
             this.lblans3.Image = global::ContAssessment.Properties.Resources.health_bar_final_FINAL_FINAL__easy__1_life;
-            this.lblans3.Location = new System.Drawing.Point(323, 335);
+            this.lblans3.Location = new System.Drawing.Point(216, 329);
             this.lblans3.Name = "lblans3";
             this.lblans3.Size = new System.Drawing.Size(205, 25);
             this.lblans3.TabIndex = 6;
@@ -160,7 +162,7 @@ namespace ContAssessment
             this.lblans4.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblans4.ForeColor = System.Drawing.Color.Red;
             this.lblans4.Image = global::ContAssessment.Properties.Resources.health_bar_final_FINAL_FINAL__easy__1_life;
-            this.lblans4.Location = new System.Drawing.Point(705, 338);
+            this.lblans4.Location = new System.Drawing.Point(218, 387);
             this.lblans4.Name = "lblans4";
             this.lblans4.Size = new System.Drawing.Size(199, 25);
             this.lblans4.TabIndex = 7;
@@ -175,9 +177,10 @@ namespace ContAssessment
             this.lblQuestion.Image = global::ContAssessment.Properties.Resources.health_bar_final_FINAL_FINAL__easy__1_life;
             this.lblQuestion.Location = new System.Drawing.Point(237, 101);
             this.lblQuestion.Name = "lblQuestion";
-            this.lblQuestion.Size = new System.Drawing.Size(616, 111);
+            this.lblQuestion.Size = new System.Drawing.Size(616, 99);
             this.lblQuestion.TabIndex = 8;
             this.lblQuestion.Text = "label5";
+            this.lblQuestion.Click += new System.EventHandler(this.lblQuestion_Click);
             // 
             // timer1
             // 
@@ -187,13 +190,14 @@ namespace ContAssessment
             // 
             // lblTime
             // 
+            this.lblTime.AutoSize = true;
             this.lblTime.BackColor = System.Drawing.Color.Transparent;
-            this.lblTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTime.ForeColor = System.Drawing.Color.Red;
             this.lblTime.Image = global::ContAssessment.Properties.Resources.health_bar_final_FINAL_FINAL__easy__1_life;
-            this.lblTime.Location = new System.Drawing.Point(577, 319);
+            this.lblTime.Location = new System.Drawing.Point(633, 274);
             this.lblTime.Name = "lblTime";
-            this.lblTime.Size = new System.Drawing.Size(45, 45);
+            this.lblTime.Size = new System.Drawing.Size(0, 73);
             this.lblTime.TabIndex = 9;
             // 
             // btnSubmit
@@ -213,7 +217,7 @@ namespace ContAssessment
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.BackgroundImage = global::ContAssessment.Properties.Resources.health_bar_final_FINAL_FINAL__easy;
-            this.pictureBox2.Location = new System.Drawing.Point(685, 319);
+            this.pictureBox2.Location = new System.Drawing.Point(189, 375);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(235, 50);
             this.pictureBox2.TabIndex = 12;
@@ -224,7 +228,7 @@ namespace ContAssessment
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.BackgroundImage = global::ContAssessment.Properties.Resources.health_bar_final_FINAL_FINAL__easy;
-            this.pictureBox3.Location = new System.Drawing.Point(305, 319);
+            this.pictureBox3.Location = new System.Drawing.Point(186, 319);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(238, 50);
             this.pictureBox3.TabIndex = 13;
@@ -235,9 +239,9 @@ namespace ContAssessment
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox4.BackgroundImage = global::ContAssessment.Properties.Resources.health_bar_final_FINAL_FINAL__easy;
-            this.pictureBox4.Location = new System.Drawing.Point(685, 215);
+            this.pictureBox4.Location = new System.Drawing.Point(186, 263);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(235, 50);
+            this.pictureBox4.Size = new System.Drawing.Size(238, 50);
             this.pictureBox4.TabIndex = 14;
             this.pictureBox4.TabStop = false;
             this.pictureBox4.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox4_MouseClick);
@@ -246,7 +250,7 @@ namespace ContAssessment
             // 
             this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox5.Image = global::ContAssessment.Properties.Resources.health_bar_final_FINAL_FINAL__easy__1_life;
-            this.pictureBox5.Location = new System.Drawing.Point(305, 215);
+            this.pictureBox5.Location = new System.Drawing.Point(186, 203);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(238, 50);
             this.pictureBox5.TabIndex = 15;
@@ -262,6 +266,7 @@ namespace ContAssessment
             this.Health1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Health1.TabIndex = 16;
             this.Health1.TabStop = false;
+            this.Health1.Click += new System.EventHandler(this.Health1_Click);
             // 
             // Health2
             // 
@@ -308,7 +313,7 @@ namespace ContAssessment
             this.detonationtime.BackColor = System.Drawing.Color.Transparent;
             this.detonationtime.BackgroundImage = global::ContAssessment.Properties.Resources.health_bar_final_FINAL_FINAL__easy;
             this.detonationtime.Image = global::ContAssessment.Properties.Resources.detonation_time_2;
-            this.detonationtime.Location = new System.Drawing.Point(378, 271);
+            this.detonationtime.Location = new System.Drawing.Point(523, 211);
             this.detonationtime.Name = "detonationtime";
             this.detonationtime.Size = new System.Drawing.Size(330, 42);
             this.detonationtime.TabIndex = 21;
@@ -323,9 +328,8 @@ namespace ContAssessment
             this.lblEQCount.Image = global::ContAssessment.Properties.Resources.health_bar_final_FINAL_FINAL__easy__1_life;
             this.lblEQCount.Location = new System.Drawing.Point(637, 55);
             this.lblEQCount.Name = "lblEQCount";
-            this.lblEQCount.Size = new System.Drawing.Size(99, 33);
+            this.lblEQCount.Size = new System.Drawing.Size(0, 33);
             this.lblEQCount.TabIndex = 22;
-            this.lblEQCount.Text = "label1";
             // 
             // lblEScore
             // 
@@ -336,15 +340,45 @@ namespace ContAssessment
             this.lblEScore.Image = global::ContAssessment.Properties.Resources.health_bar_final_FINAL_FINAL__easy__1_life;
             this.lblEScore.Location = new System.Drawing.Point(530, 491);
             this.lblEScore.Name = "lblEScore";
-            this.lblEScore.Size = new System.Drawing.Size(92, 31);
+            this.lblEScore.Size = new System.Drawing.Size(0, 31);
             this.lblEScore.TabIndex = 23;
-            this.lblEScore.Text = "label1";
+            // 
+            // btnHome
+            // 
+            this.btnHome.BackColor = System.Drawing.Color.Crimson;
+            this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHome.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnHome.Location = new System.Drawing.Point(938, 504);
+            this.btnHome.Margin = new System.Windows.Forms.Padding(2);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.Size = new System.Drawing.Size(122, 49);
+            this.btnHome.TabIndex = 24;
+            this.btnHome.Text = "Home";
+            this.btnHome.UseVisualStyleBackColor = false;
+            this.btnHome.Click += new System.EventHandler(this.btnQuit_Click);
+            // 
+            // btnQuit
+            // 
+            this.btnQuit.BackColor = System.Drawing.Color.Crimson;
+            this.btnQuit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnQuit.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQuit.Location = new System.Drawing.Point(16, 504);
+            this.btnQuit.Margin = new System.Windows.Forms.Padding(2);
+            this.btnQuit.Name = "btnQuit";
+            this.btnQuit.Size = new System.Drawing.Size(112, 49);
+            this.btnQuit.TabIndex = 25;
+            this.btnQuit.Text = "Quit";
+            this.btnQuit.UseVisualStyleBackColor = false;
+            this.btnQuit.Click += new System.EventHandler(this.button2_Click);
             // 
             // easyCB
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1069, 562);
+            this.Controls.Add(this.btnQuit);
+            this.Controls.Add(this.btnHome);
             this.Controls.Add(this.lblEScore);
             this.Controls.Add(this.lblEQCount);
             this.Controls.Add(this.btnSubmit);
@@ -413,5 +447,7 @@ namespace ContAssessment
         private System.Windows.Forms.PictureBox detonationtime;
         private System.Windows.Forms.Label lblEQCount;
         private System.Windows.Forms.Label lblEScore;
+        private System.Windows.Forms.Button btnHome;
+        private System.Windows.Forms.Button btnQuit;
     }
 }

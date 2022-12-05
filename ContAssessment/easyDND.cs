@@ -8,176 +8,149 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using System.Resources;
+using System.Xml;
 
 namespace ContAssessment
 {
     public partial class easyDND : Form
     {
         string[] questionPartsArray;
+        string selectedimg;
+
+        List<string> images = new List<string>();
+        List<string> saveimages = new List<string>();
+        List<string> randimages = new List<string>();
+        List<string> answers = new List<string>();
+        List<string> saveanswers = new List<string>();
         public easyDND()
         {
             InitializeComponent();
         }
+
         private void easyDND_Load(object sender, EventArgs e)
         {
-            if (globaldata.ELife == 1)
-            {
-                Health1.Visible = false;
-                Health2.Visible = true;
-            }
-            if (globaldata.ELife == 2)
-            {
-                Health1.Visible = false;
-                Health2.Visible = false;
-                Health3.Visible = true;
-            }
-            if (globaldata.ELife == 3)
-            {
-                Health1.Visible = false;
-                Health2.Visible = false;
-                Health3.Visible = false;
-                Health4.Visible = true;
-            }
-            if (globaldata.ELife == 4)
-            {
-                Health1.Visible = false;
-                Health2.Visible = false;
-                Health3.Visible = false;
-                Health4.Visible = false;
-                Health5.Visible = true;
-            }
-            lblEScore.Text = globaldata.Score + "";
-            lblEQCount.Text = "";
-            globaldata.ETimeLeft = 16;
-            lblTime.Visible = true;
-            timer1.Start();
+            saveanswers.Add("");
+            saveanswers.Add("");
+            saveanswers.Add("");
+            saveanswers.Add("");
+
+            string[] linesarray = File.ReadAllLines("EDNDQuestions.txt");
+            List<string> questions = linesarray.ToList();
+            List<string> imagequestions = new List<string>();
+            Random rand = new Random();
 
             pictureBox1.AllowDrop = true;
             pictureBox2.AllowDrop = true;
             pictureBox3.AllowDrop = true;
             pictureBox4.AllowDrop = true;
-            var linesArray = File.ReadAllLines("EDNDQuestions.txt");
-            List<string> Questions = linesArray.ToList();
-            List<string> ImageQuestions = new List<string>();
-            for (int i = 0; i < Questions.Count; i++)
+            pictureBox5.AllowDrop = true;
+            pictureBox6.AllowDrop = true;
+            pictureBox7.AllowDrop = true;
+            pictureBox8.AllowDrop = true;
+
+            for (int i = 0; i < questions.Count; i++)
             {
-                questionPartsArray = Questions[i].Split(",");
+                questionPartsArray = questions[i].Split(',');
                 if (questionPartsArray[0] == "IMG")
                 {
-                    pictureBox1.Show();
-                    pictureBox2.Show();
-                    pictureBox3.Show();
-                    pictureBox4.Show();
+                    imagequestions.Add(questions[i]);
+                }
 
-                    ImageQuestions.Add(Questions[i]);
-
-                    Random rand = new Random();
-                    int qcount = ImageQuestions.Count();
-                    int num = rand.Next(0, qcount);
-                    questionPartsArray = ImageQuestions[num].Split(",");
-
-                    List<string> images = new List<string>();
-                    List<string> randImages = new List<string>();
-                    images.Add(questionPartsArray[6]);
-                    images.Add(questionPartsArray[7]);
-                    images.Add(questionPartsArray[8]);
-                    images.Add(questionPartsArray[9]);
-                    lblQuestion.Text = questionPartsArray[1];
-                    lblans1.Text = questionPartsArray[2];
-                    lblans2.Text = questionPartsArray[3];
-                    lblans3.Text = questionPartsArray[4];
-                    lblans4.Text = questionPartsArray[5];
-
-                    while (images.Count != 0)
-                    {
-                        rand = new Random();
-                        var index = rand.Next(0, (images.Count - 1));
-                        randImages.Add(images[index]);
-                        images.RemoveAt(index);
-                    }
-
-                    pictureBox1.Image = (Bitmap)Properties.Resources.ResourceManager.GetObject(randImages[0]);
-                    pictureBox2.Image = (Bitmap)Properties.Resources.ResourceManager.GetObject(randImages[1]);
-                    pictureBox3.Image = (Bitmap)Properties.Resources.ResourceManager.GetObject(randImages[2]);
-                    pictureBox4.Image = (Bitmap)Properties.Resources.ResourceManager.GetObject(randImages[3]);
-
-                    pictureBox1.Image.Tag = randImages[0];
-                    pictureBox2.Image.Tag = randImages[1];
-                    pictureBox3.Image.Tag = randImages[2];
-                    pictureBox4.Image.Tag = randImages[3];
-
-                } 
             }
-        }
+            int qcount = imagequestions.Count();
+            int num = rand.Next(0, qcount - 1);
+            questionPartsArray = imagequestions[num].Split(',');
+            lblQuestion.Text = questionPartsArray[1];
+            images.Add(questionPartsArray[2]);
+            images.Add(questionPartsArray[3]);
+            images.Add(questionPartsArray[4]);
+            images.Add(questionPartsArray[5]);
 
-        private void pictureBox8_DragEnter(object sender, DragEventArgs e)
-        {
-            e.Effect = DragDropEffects.Copy;
-            globaldata.PB8IMG = globaldata.IMGTAG;
-        }
+            answers.Add(questionPartsArray[2]);
+            answers.Add(questionPartsArray[3]);
+            answers.Add(questionPartsArray[4]);
+            answers.Add(questionPartsArray[5]);
 
-        private void pictureBox7_DragEnter(object sender, DragEventArgs e)
-        {
-            e.Effect = DragDropEffects.Copy;
-            globaldata.PB7IMG = globaldata.IMGTAG;
-        }
-
-        private void pictureBox6_DragEnter(object sender, DragEventArgs e)
-        {
-            e.Effect = DragDropEffects.Copy;
-            globaldata.PB6IMG = globaldata.IMGTAG;
-        }
-
-        private void pictureBox5_DragEnter(object sender, DragEventArgs e)
-        {
-            e.Effect = DragDropEffects.Copy;
-            globaldata.PB5IMG = globaldata.IMGTAG;
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            pictureBox5.Image.Tag = globaldata.PB5IMG;
-            pictureBox6.Image.Tag = globaldata.PB6IMG;
-            pictureBox7.Image.Tag = globaldata.PB7IMG;
-            pictureBox8.Image.Tag = globaldata.PB8IMG;
-
-            if (pictureBox8.Image.Tag.ToString() == lblans1.Text &&)
+            saveimages = images.ToList();
+            saveanswers = images.ToList();
+            while (images.Count != 0)
             {
-                MessageBox.Show("Correct!");
+                rand = new Random();
+                var index = rand.Next(0, (images.Count - 0));
+                randimages.Add(images[index]);
+                images.RemoveAt(index);
             }
-            else
-            {
-                MessageBox.Show("Incorrect!");
-            }
-        }
 
+            pictureBox1.Image = (Bitmap)Properties.Resources.ResourceManager.GetObject(randimages[0]);
+            pictureBox2.Image = (Bitmap)Properties.Resources.ResourceManager.GetObject(randimages[1]);
+            pictureBox3.Image = (Bitmap)Properties.Resources.ResourceManager.GetObject(randimages[2]);
+            pictureBox4.Image = (Bitmap)Properties.Resources.ResourceManager.GetObject(randimages[3]);
+        }
         private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
         {
-            globaldata.IMGTAG = pictureBox1.Image.Tag.ToString();
+            selectedimg = randimages[0];
             pictureBox1.DoDragDrop(pictureBox1.Image, DragDropEffects.Copy);
         }
 
         private void pictureBox2_MouseDown(object sender, MouseEventArgs e)
         {
-            globaldata.IMGTAG = pictureBox2.Image.Tag.ToString();
-            pictureBox2.DoDragDrop(pictureBox1.Image, DragDropEffects.Copy);
+            selectedimg = randimages[1];
+            pictureBox2.DoDragDrop(pictureBox2.Image, DragDropEffects.Copy);
         }
 
         private void pictureBox3_MouseDown(object sender, MouseEventArgs e)
         {
-            globaldata.IMGTAG = pictureBox3.Image.Tag.ToString();
-            pictureBox3.DoDragDrop(pictureBox1.Image, DragDropEffects.Copy);
+            selectedimg = randimages[2];
+            pictureBox3.DoDragDrop(pictureBox3.Image, DragDropEffects.Copy);
         }
 
         private void pictureBox4_MouseDown(object sender, MouseEventArgs e)
         {
-            globaldata.IMGTAG = pictureBox4.Image.Tag.ToString();
-            pictureBox4.DoDragDrop(pictureBox1.Image, DragDropEffects.Copy);
+            selectedimg = randimages[3];
+            pictureBox4.DoDragDrop(pictureBox4.Image, DragDropEffects.Copy);
         }
 
-        private void pictureBox3_Click(object sender, EventArgs e)
+        private void pictureBox5_DragDrop(object sender, DragEventArgs e)
         {
+            answers[0] = selectedimg;
+            pictureBox8.Image = (Image)e.Data.GetData(DataFormats.Bitmap);
+        }
 
+        private void pictureBox6_DragDrop(object sender, DragEventArgs e)
+        {
+            answers[1] = selectedimg;
+            pictureBox7.Image = (Image)e.Data.GetData(DataFormats.Bitmap);
+        }
+
+        private void pictureBox7_DragDrop(object sender, DragEventArgs e)
+        {
+            answers[2] = selectedimg;
+            pictureBox6.Image = (Image)e.Data.GetData(DataFormats.Bitmap);
+        }
+
+        private void pictureBox8_DragDrop(object sender, DragEventArgs e)
+        {
+            answers[3] = selectedimg;
+            pictureBox5.Image = (Image)e.Data.GetData(DataFormats.Bitmap);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if ((pictureBox5 == null) || (pictureBox6 == null) || (pictureBox7 == null) || (pictureBox8 == null))
+            {
+                MessageBox.Show("Please select an answer.");
+                return;
+            }
+            for (int idx = 0; idx < 4; idx++)
+            {
+                if (saveimages[idx] != answers[idx])
+                {
+                    MessageBox.Show("Incorrect!");
+                    return;
+                }
+            }
+            MessageBox.Show("Good job!"); 
         }
     }
 }

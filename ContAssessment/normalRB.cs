@@ -66,8 +66,11 @@ namespace ContAssessment
             if (rbselected != questionPartsArray[6])
             {
                 timer1.Stop();
+                lblNTime.Visible = false;
                 MessageBox.Show("Incorrect!");
-                timer1.Start();
+                globaldata.Score--;
+                this.Hide();
+
                 globaldata.NLife = globaldata.NLife + 1;
                 if (globaldata.NLife == 1)
                 {
@@ -83,8 +86,6 @@ namespace ContAssessment
                 if (globaldata.NLife == 3)
                 {
                     timer1.Stop();
-                    endscreen end1 = new endscreen();
-                    end1.Show();
                     this.Hide();
                 }
             }
@@ -126,7 +127,7 @@ namespace ContAssessment
         private void timer1_Tick(object sender, EventArgs e)
         {
             globaldata.NTimeLeft = globaldata.NTimeLeft - 1;
-            lblNQCount.Text = globaldata.NCount + "";
+            lblNQCount.Text = globaldata.NCount + "/20";
             lblNTime.Text = globaldata.NTimeLeft + "";
             if (globaldata.NTimeLeft == 0)
             {
@@ -135,7 +136,7 @@ namespace ContAssessment
                 timer1.Stop();
                 this.Hide();
                 globaldata.NLife = globaldata.NLife + 1;
-                globaldata.Score--;
+                globaldata.Score -= 2;
                 if (globaldata.NLife == 1)
                 {
                     Health1.Visible = false;
@@ -151,9 +152,7 @@ namespace ContAssessment
                 {
                     globaldata.NQCount = 0;
                     timer1.Stop();
-                    endscreen end1 = new endscreen();
                     this.Hide();
-                    end1.Show();
                 }
             }
         }
@@ -188,6 +187,50 @@ namespace ContAssessment
             rb2.Checked = true;
             rb3.Checked = false;
             rb4.Checked = false;
+        }
+
+        private void pictureBox3_MouseClick(object sender, MouseEventArgs e)
+        {
+            rb1.Checked = false;
+            rb2.Checked = false;
+            rb3.Checked = true;
+            rb4.Checked = false;
+        }
+        private void lblans3_MouseClick(object sender, MouseEventArgs e)
+        {
+            rb1.Checked = false;
+            rb2.Checked = false;
+            rb3.Checked = true;
+            rb4.Checked = false;
+        }
+
+        private void pictureBox4_MouseClick(object sender, MouseEventArgs e)
+        {
+            rb1.Checked = false;
+            rb2.Checked = false;
+            rb3.Checked = false;
+            rb4.Checked = true;
+        }
+        private void lblans4_MouseClick(object sender, MouseEventArgs e)
+        {
+            rb1.Checked = false;
+            rb2.Checked = false;
+            rb3.Checked = false;
+            rb4.Checked = true;
+        }
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            globaldata.Score = 0;
+            globaldata.NLife = 0;
+            difficulty diff1 = new difficulty();
+            this.Hide();
+            diff1.Show();
+        }
+
+        private void btnQuit_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

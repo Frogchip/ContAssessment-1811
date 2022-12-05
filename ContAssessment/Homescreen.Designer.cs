@@ -42,24 +42,28 @@ namespace ContAssessment
             // 
             // btnLogin
             // 
+            this.btnLogin.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.Location = new System.Drawing.Point(380, 273);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(107, 42);
             this.btnLogin.TabIndex = 0;
             this.btnLogin.Text = "Login";
-            this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // btnRegister
             // 
+            this.btnRegister.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegister.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegister.Location = new System.Drawing.Point(266, 273);
+            this.btnRegister.Location = new System.Drawing.Point(240, 273);
             this.btnRegister.Name = "btnRegister";
-            this.btnRegister.Size = new System.Drawing.Size(108, 42);
+            this.btnRegister.Size = new System.Drawing.Size(119, 42);
             this.btnRegister.TabIndex = 1;
             this.btnRegister.Text = "Register";
-            this.btnRegister.UseVisualStyleBackColor = true;
+            this.btnRegister.UseVisualStyleBackColor = false;
             this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
             // 
             // txtUsername
@@ -81,10 +85,12 @@ namespace ContAssessment
             // lblUsername
             // 
             this.lblUsername.AutoSize = true;
-            this.lblUsername.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsername.Location = new System.Drawing.Point(228, 195);
+            this.lblUsername.BackColor = System.Drawing.Color.Transparent;
+            this.lblUsername.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsername.ForeColor = System.Drawing.Color.GreenYellow;
+            this.lblUsername.Location = new System.Drawing.Point(207, 190);
             this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(81, 21);
+            this.lblUsername.Size = new System.Drawing.Size(98, 25);
             this.lblUsername.TabIndex = 4;
             this.lblUsername.Text = "Username";
             this.lblUsername.Click += new System.EventHandler(this.lblUsername_Click);
@@ -92,10 +98,12 @@ namespace ContAssessment
             // lblPassword
             // 
             this.lblPassword.AutoSize = true;
-            this.lblPassword.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPassword.Location = new System.Drawing.Point(228, 231);
+            this.lblPassword.BackColor = System.Drawing.Color.Transparent;
+            this.lblPassword.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPassword.ForeColor = System.Drawing.Color.GreenYellow;
+            this.lblPassword.Location = new System.Drawing.Point(207, 227);
             this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(76, 21);
+            this.lblPassword.Size = new System.Drawing.Size(91, 25);
             this.lblPassword.TabIndex = 5;
             this.lblPassword.Text = "Password";
             this.lblPassword.Click += new System.EventHandler(this.label2_Click);
@@ -119,19 +127,23 @@ namespace ContAssessment
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.Crimson;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(630, 379);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(110, 46);
             this.button1.TabIndex = 8;
             this.button1.Text = "Quit";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Homescreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::ContAssessment.Properties.Resources.Dolphin_Emulator_Screenshot_2022_01_16___17_17_23_21;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.lblwrongUser);

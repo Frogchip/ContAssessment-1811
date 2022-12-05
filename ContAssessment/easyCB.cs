@@ -98,7 +98,7 @@ namespace ContAssessment
                 timer1.Stop();
                 lblTime.Visible = false;
                 MessageBox.Show("Incorrect!");
-                globaldata.Score-=2;
+                globaldata.Score--;
                 this.Hide();
                 globaldata.ELife = globaldata.ELife + 1;
                 if (globaldata.ELife == 1)
@@ -120,8 +120,6 @@ namespace ContAssessment
                 if (globaldata.ELife == 5)
                 {
                     timer1.Stop();
-                    endscreen end1 = new endscreen();
-                    end1.Show();
                     this.Hide();
                 }
             }
@@ -137,7 +135,7 @@ namespace ContAssessment
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            lblEQCount.Text = globaldata.ECount + "";
+            lblEQCount.Text = globaldata.ECount + "/20";
             lblEScore.Text = globaldata.Score + "";
             lblTime.Visible = true;
             timer1.Start();
@@ -225,6 +223,30 @@ namespace ContAssessment
             cb2.Checked = false;
             cb3.Checked = false;
             cb4.Checked = true;
+        }
+
+        private void btnQuit_Click(object sender, EventArgs e)
+        {
+            globaldata.ELife = 0;
+            globaldata.Score = 0;
+            difficulty diff1 = new difficulty();
+            this.Hide();
+            diff1.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void lblQuestion_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Health1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

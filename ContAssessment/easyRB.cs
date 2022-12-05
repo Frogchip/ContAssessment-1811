@@ -97,7 +97,7 @@ namespace ContAssessment
                 timer1.Stop();
                 lblTime.Visible = false;
                 MessageBox.Show("Incorrect!");
-                globaldata.Score-=2;
+                globaldata.Score--;
                 this.Hide();
                 globaldata.ELife = globaldata.ELife + 1;
                 if (globaldata.ELife == 1)
@@ -119,8 +119,6 @@ namespace ContAssessment
                 if (globaldata.ELife == 5)
                 {
                     timer1.Stop();
-                    endscreen end1 = new endscreen();
-                    end1.Show();
                     this.Hide();
                 }
             }
@@ -136,14 +134,21 @@ namespace ContAssessment
 
         private void timer1_Tick_1(object sender, EventArgs e)
         {
-            lblEQCount.Text = globaldata.ECount + "";
+            lblEQCount.Text = globaldata.ECount + "/20";
             lblEScore.Text = globaldata.Score + "";
             lblTime.Visible = true;
             timer1.Start();
             globaldata.ETimeLeft = globaldata.ETimeLeft - 1;
             lblTime.Text = globaldata.ETimeLeft + "";
+            if (globaldata.ETimeLeft == 5)
+            {
+                //System.Media.SoundPlayer player = new System.Media.SoundPlayer(@"c:\mywavfile.wav");
+                //player.Play();
+            }
             if (globaldata.ETimeLeft == 0)
             {
+                //System.Media.SoundPlayer player = new System.Media.SoundPlayer(@"c:\mywavfile.wav");
+                //player.Play();
                 lblTime.Visible = false;
                 globaldata.ECount++;
                 MessageBox.Show("Out of time!");
@@ -224,6 +229,25 @@ namespace ContAssessment
             rb2.Checked = false;
             rb3.Checked = false;
             rb4.Checked = true;
+        }
+
+        private void btnQuit_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            globaldata.Score = 0;
+            globaldata.ELife = 0;
+            difficulty diff1 = new difficulty();
+            this.Hide();
+            diff1.Show();
+        }
+
+        private void Health1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

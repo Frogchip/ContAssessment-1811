@@ -52,6 +52,8 @@ namespace ContAssessment
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.btnQuit = new System.Windows.Forms.Button();
+            this.btnHome = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Health1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Health2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Health3)).BeginInit();
@@ -81,7 +83,7 @@ namespace ContAssessment
             this.lblans1.BackColor = System.Drawing.Color.Transparent;
             this.lblans1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblans1.ForeColor = System.Drawing.Color.Red;
-            this.lblans1.Location = new System.Drawing.Point(393, 225);
+            this.lblans1.Location = new System.Drawing.Point(348, 225);
             this.lblans1.Name = "lblans1";
             this.lblans1.Size = new System.Drawing.Size(57, 21);
             this.lblans1.TabIndex = 1;
@@ -95,7 +97,7 @@ namespace ContAssessment
             this.lblans2.BackColor = System.Drawing.Color.Transparent;
             this.lblans2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblans2.ForeColor = System.Drawing.Color.Red;
-            this.lblans2.Location = new System.Drawing.Point(684, 225);
+            this.lblans2.Location = new System.Drawing.Point(736, 227);
             this.lblans2.Name = "lblans2";
             this.lblans2.Size = new System.Drawing.Size(57, 21);
             this.lblans2.TabIndex = 2;
@@ -108,11 +110,12 @@ namespace ContAssessment
             this.lblans3.BackColor = System.Drawing.Color.Transparent;
             this.lblans3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblans3.ForeColor = System.Drawing.Color.Red;
-            this.lblans3.Location = new System.Drawing.Point(393, 332);
+            this.lblans3.Location = new System.Drawing.Point(348, 330);
             this.lblans3.Name = "lblans3";
             this.lblans3.Size = new System.Drawing.Size(57, 21);
             this.lblans3.TabIndex = 3;
             this.lblans3.Text = "label3";
+            this.lblans3.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblans3_MouseClick);
             // 
             // lblans4
             // 
@@ -120,17 +123,18 @@ namespace ContAssessment
             this.lblans4.BackColor = System.Drawing.Color.Transparent;
             this.lblans4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblans4.ForeColor = System.Drawing.Color.Red;
-            this.lblans4.Location = new System.Drawing.Point(684, 332);
+            this.lblans4.Location = new System.Drawing.Point(736, 330);
             this.lblans4.Name = "lblans4";
             this.lblans4.Size = new System.Drawing.Size(57, 21);
             this.lblans4.TabIndex = 4;
             this.lblans4.Text = "label4";
+            this.lblans4.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblans4_MouseClick);
             // 
             // rb1
             // 
             this.rb1.AutoSize = true;
             this.rb1.BackColor = System.Drawing.Color.Transparent;
-            this.rb1.Location = new System.Drawing.Point(373, 231);
+            this.rb1.Location = new System.Drawing.Point(328, 231);
             this.rb1.Name = "rb1";
             this.rb1.Size = new System.Drawing.Size(14, 13);
             this.rb1.TabIndex = 6;
@@ -142,7 +146,7 @@ namespace ContAssessment
             // 
             this.rb2.AutoSize = true;
             this.rb2.BackColor = System.Drawing.Color.Transparent;
-            this.rb2.Location = new System.Drawing.Point(664, 231);
+            this.rb2.Location = new System.Drawing.Point(716, 233);
             this.rb2.Name = "rb2";
             this.rb2.Size = new System.Drawing.Size(14, 13);
             this.rb2.TabIndex = 7;
@@ -154,7 +158,7 @@ namespace ContAssessment
             // 
             this.rb3.AutoSize = true;
             this.rb3.BackColor = System.Drawing.Color.Transparent;
-            this.rb3.Location = new System.Drawing.Point(373, 338);
+            this.rb3.Location = new System.Drawing.Point(328, 336);
             this.rb3.Name = "rb3";
             this.rb3.Size = new System.Drawing.Size(14, 13);
             this.rb3.TabIndex = 8;
@@ -166,7 +170,7 @@ namespace ContAssessment
             // 
             this.rb4.AutoSize = true;
             this.rb4.BackColor = System.Drawing.Color.Transparent;
-            this.rb4.Location = new System.Drawing.Point(664, 338);
+            this.rb4.Location = new System.Drawing.Point(716, 338);
             this.rb4.Name = "rb4";
             this.rb4.Size = new System.Drawing.Size(14, 13);
             this.rb4.TabIndex = 9;
@@ -219,7 +223,7 @@ namespace ContAssessment
             this.Health2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Health2.Location = new System.Drawing.Point(0, 0);
             this.Health2.Name = "Health2";
-            this.Health2.Size = new System.Drawing.Size(800, 450);
+            this.Health2.Size = new System.Drawing.Size(1070, 564);
             this.Health2.TabIndex = 15;
             this.Health2.TabStop = false;
             // 
@@ -229,7 +233,7 @@ namespace ContAssessment
             this.Health3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Health3.Location = new System.Drawing.Point(0, 0);
             this.Health3.Name = "Health3";
-            this.Health3.Size = new System.Drawing.Size(800, 450);
+            this.Health3.Size = new System.Drawing.Size(1070, 564);
             this.Health3.TabIndex = 16;
             this.Health3.TabStop = false;
             // 
@@ -251,26 +255,24 @@ namespace ContAssessment
             this.lblNScore.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.lblNScore.Location = new System.Drawing.Point(534, 491);
             this.lblNScore.Name = "lblNScore";
-            this.lblNScore.Size = new System.Drawing.Size(106, 37);
+            this.lblNScore.Size = new System.Drawing.Size(0, 37);
             this.lblNScore.TabIndex = 18;
-            this.lblNScore.Text = "label1";
             // 
             // lblNQCount
             // 
-            this.lblNQCount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.lblNQCount.BackColor = System.Drawing.Color.Transparent;
             this.lblNQCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNQCount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.lblNQCount.Location = new System.Drawing.Point(635, 52);
+            this.lblNQCount.Location = new System.Drawing.Point(638, 52);
             this.lblNQCount.Name = "lblNQCount";
             this.lblNQCount.Size = new System.Drawing.Size(117, 43);
             this.lblNQCount.TabIndex = 19;
-            this.lblNQCount.Text = "label1";
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.BackgroundImage = global::ContAssessment.Properties.Resources.health_bar_final_FINAL_FINAL__easy;
-            this.pictureBox1.Location = new System.Drawing.Point(373, 207);
+            this.pictureBox1.Location = new System.Drawing.Point(322, 207);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(100, 50);
             this.pictureBox1.TabIndex = 20;
@@ -281,9 +283,9 @@ namespace ContAssessment
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.BackgroundImage = global::ContAssessment.Properties.Resources.health_bar_final_FINAL_FINAL__easy;
-            this.pictureBox2.Location = new System.Drawing.Point(664, 207);
+            this.pictureBox2.Location = new System.Drawing.Point(706, 207);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox2.Size = new System.Drawing.Size(110, 50);
             this.pictureBox2.TabIndex = 21;
             this.pictureBox2.TabStop = false;
             this.pictureBox2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox2_MouseClick);
@@ -292,28 +294,59 @@ namespace ContAssessment
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.BackgroundImage = global::ContAssessment.Properties.Resources.health_bar_final_FINAL_FINAL__easy;
-            this.pictureBox3.Location = new System.Drawing.Point(373, 313);
+            this.pictureBox3.Location = new System.Drawing.Point(322, 314);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(100, 50);
             this.pictureBox3.TabIndex = 22;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox3_MouseClick);
             // 
             // pictureBox4
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox4.BackgroundImage = global::ContAssessment.Properties.Resources.health_bar_final_FINAL_FINAL__easy;
-            this.pictureBox4.Location = new System.Drawing.Point(664, 313);
+            this.pictureBox4.Location = new System.Drawing.Point(706, 314);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox4.Size = new System.Drawing.Size(110, 50);
             this.pictureBox4.TabIndex = 23;
             this.pictureBox4.TabStop = false;
+            this.pictureBox4.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox4_MouseClick);
+            // 
+            // btnQuit
+            // 
+            this.btnQuit.BackColor = System.Drawing.Color.Crimson;
+            this.btnQuit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnQuit.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQuit.Location = new System.Drawing.Point(12, 504);
+            this.btnQuit.Name = "btnQuit";
+            this.btnQuit.Size = new System.Drawing.Size(119, 46);
+            this.btnQuit.TabIndex = 24;
+            this.btnQuit.Text = "Quit";
+            this.btnQuit.UseVisualStyleBackColor = false;
+            this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
+            // 
+            // btnHome
+            // 
+            this.btnHome.BackColor = System.Drawing.Color.Crimson;
+            this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHome.Location = new System.Drawing.Point(920, 505);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.Size = new System.Drawing.Size(123, 45);
+            this.btnHome.TabIndex = 25;
+            this.btnHome.Text = "Home";
+            this.btnHome.UseVisualStyleBackColor = false;
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
             // normalRB
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ContAssessment.Properties.Resources.health_bar_final_FINAL_FINAL__easy;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1069, 562);
+            this.Controls.Add(this.btnHome);
+            this.Controls.Add(this.btnQuit);
             this.Controls.Add(this.lblNQCount);
             this.Controls.Add(this.lblNScore);
             this.Controls.Add(this.pictureBox6);
@@ -376,5 +409,7 @@ namespace ContAssessment
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Button btnQuit;
+        private System.Windows.Forms.Button btnHome;
     }
 }

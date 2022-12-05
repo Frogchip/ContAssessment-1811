@@ -124,14 +124,14 @@
   <data name="detonation-time-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\detonation-time-2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="health-bar-final-FINAL-FINAL--easy---3-lives" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\health-bar-final-FINAL-FINAL--easy---3-lives.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="health-bar-final-FINAL-FINAL--easy-2-lives" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\health-bar-final-FINAL-FINAL--easy-2-lives.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="health-bar-final-FINAL-FINAL--easy---4-lives" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\health-bar-final-FINAL-FINAL--easy---4-lives.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="italy" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\italy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="health-bar-final-FINAL-FINAL--easy--1-life" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\health-bar-final-FINAL-FINAL--easy--1-life.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="bangladesh" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bangladesh.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="health-bar-final-FINAL-FINAL--easy" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\health-bar-final-FINAL-FINAL--easy.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -139,8 +139,11 @@
   <data name="detonation-time" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\detonation-time.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="health-bar-final-FINAL-FINAL--easy-2-lives" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\health-bar-final-FINAL-FINAL--easy-2-lives.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="health-bar-final-FINAL-FINAL--easy---3-lives" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\health-bar-final-FINAL-FINAL--easy---3-lives.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="difficulty-screen-FINAL" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\difficulty-screen-FINAL.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="south africa" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\south africa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -148,10 +151,16 @@
   <data name="columbia" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\columbia.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="bangladesh" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bangladesh.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="health-bar-final-FINAL-FINAL--easy--1-life" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\health-bar-final-FINAL-FINAL--easy--1-life.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="italy" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\italy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="health-bar-final-FINAL-FINAL--easy---4-lives" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\health-bar-final-FINAL-FINAL--easy---4-lives.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Dolphin Emulator Screenshot 2022.01.16 - 17.17.23.21" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Dolphin Emulator Screenshot 2022.01.16 - 17.17.23.21.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Dolphin Emulator Screenshot 2022.01.16 - 17.18.57.08" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Dolphin Emulator Screenshot 2022.01.16 - 17.18.57.08.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -9,6 +9,7 @@ namespace ContAssessment
     static class globaldata
     {
         public static string userfile = "PlayerDetails.dat";
+        public static char sorttable;
 
         public static int Score = 0;
         public static int ELife = 0;
@@ -20,18 +21,8 @@ namespace ContAssessment
         public static int ECount = 1;
         public static int NCount = 1;
         public static int HCount = 1;
-        public static int EQCount = 10;
-        public static int NQCount = 10;
-        public static int HQCount = 10;
-
-        public static string PB5IMG = " ";
-        public static string PB6IMG = " ";
-        public static string PB7IMG = " ";
-        public static string PB8IMG = " ";
-        public static string IMGTAG = " ";
-        public static string IMGTAG1 = " ";
-        public static string IMGTAG2 = " ";
-        public static string IMGTAG3 = " ";
-        public static string IMGTAG4 = " ";
+        public static int EQCount = 21;
+        public static int NQCount = 21;
+        public static int HQCount = 21;
     }
 }

@@ -47,14 +47,13 @@ namespace ContAssessment
 
                 string[] random = linesarray.OrderBy(x => rand.Next()).ToArray();
 
-                globaldata.EQCount = 10;
                 for (int i = 0; i < globaldata.EQCount; i++)
                 {
                     if (globaldata.ELife == 5)
                     {
                         break;
                     }
-                    var b = rando.Next(0, 3);
+                    var b = rando.Next(1, 3);
                     if (b == 1)
                     {
                         easyRB RB1 = new easyRB();
@@ -64,7 +63,7 @@ namespace ContAssessment
                         globaldata.ETimeLeft = 16;
                         globaldata.Score += 1;
                     }
-                    else
+                    if (b == 2)
                     {
                         easyCB CB1 = new easyCB();
                         this.Hide();
@@ -74,28 +73,50 @@ namespace ContAssessment
                         globaldata.Score += 1;
                     }
                 }
+                globaldata.Score--;
+                endscreen end1 = new endscreen();
+                end1.Show();
+                this.Hide();
             }
             if (cbNormal.Checked == true)
             {
+                var rando = new Random();
                 var linesarray = File.ReadAllLines("QuizQuestionsNormal.txt");
                 Random rand = new Random();
 
                 string[] random = linesarray.OrderBy(x => rand.Next()).ToArray();
 
-                globaldata.NQCount = 10;
                 for (int i = 0; i < globaldata.NQCount; i++)
                 {
                     if (globaldata.NLife == 3)
                     {
                         break;
                     }
-                    normalRB N1 = new normalRB();
-                    this.Hide();
-                    N1.ShowQuestion(random[i]);
-                    N1.ShowDialog();
-                    globaldata.NTimeLeft = 13;
-                    globaldata.Score += 1;
+                    var b = rando.Next(1, 3);
+
+                    if (b == 1)
+                    {
+                        normalRB N1 = new normalRB();
+                        this.Hide();
+                        N1.ShowQuestion(random[i]);
+                        N1.ShowDialog();
+                        globaldata.NTimeLeft = 13;
+                        globaldata.Score += 1;
+                    }
+                    if (b == 2)
+                    {
+                        normalCB C1 = new normalCB();
+                        this.Hide();
+                        C1.ShowQuestion(random[i]);
+                        C1.ShowDialog();
+                        globaldata.NTimeLeft = 13;
+                        globaldata.Score += 1;
+                    }
                 }
+                globaldata.Score--;
+                endscreen end1 = new endscreen();
+                end1.Show();
+                this.Hide();
             }
             if (cbHard.Checked == true)
             {
@@ -105,14 +126,13 @@ namespace ContAssessment
 
                 string[] random = linesarray.OrderBy(x => rand.Next()).ToArray();
 
-                globaldata.HQCount = 10;
                 for (int i = 0; i < globaldata.HQCount; i++)
                 {
                     if (globaldata.HLife == 2)
                     {
                         break;
                     }
-                    var b = rando.Next(0,3);  
+                    var b = rando.Next(1, 3);  
                     if (b == 1)
                     {
                         hardRB HR1 = new hardRB();
@@ -132,11 +152,11 @@ namespace ContAssessment
                         globaldata.Score += 1;
                     }
                 }
+                globaldata.Score--;
+                endscreen end1 = new endscreen();
+                end1.Show();
+                this.Hide();
             }
-
-        }
-        private void difficulty_Load(object sender, EventArgs e)
-        {
 
         }
 
@@ -147,7 +167,8 @@ namespace ContAssessment
             cbHard.Checked = false;
             lblnocheck.Visible = false;
 
-            lblRules.Text = "5 Lives\n" + "10 seconds\n";
+            lblRules.ForeColor = Color.GreenYellow;
+            lblRules.Text = "You will not be challenged.\nLives: 5\n" + "Timer: 10 seconds\n" + "Questions: Easy\n";
         }        
 
         private void cbNormal_Click(object sender, EventArgs e)
@@ -157,7 +178,8 @@ namespace ContAssessment
             cbHard.Checked = false;
             lblnocheck.Visible = false;
 
-            lblRules.Text = "3 Lives\n" + "8 seconds\n";
+            lblRules.ForeColor = Color.Orange;
+            lblRules.Text = "Your speed of answering questions will be tested.\nLives: 3\n" + "Timer: 8 seconds\nQuestions: Intermediate\n";
         }
 
         private void cbHard_Click(object sender, EventArgs e)
@@ -167,12 +189,24 @@ namespace ContAssessment
             cbHard.Checked = true;
             lblnocheck.Visible = false;
 
-            lblRules.Text = "2 Lives\n" + "5 seconds\n";
+            lblRules.ForeColor = Color.Red;
+            lblRules.Text = "You will not survive.\nLives: 2\n" + "5 seconds\nQuestions: Advanced\n";
         }
 
-        private void lblnocheck_Click(object sender, EventArgs e)
+        private void difficulty_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSignOut_Click(object sender, EventArgs e)
+        {
+            Homescreen H1 = new Homescreen();
+            this.Hide();
         }
     }
 }

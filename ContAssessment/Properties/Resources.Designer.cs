@@ -103,6 +103,36 @@ namespace ContAssessment.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap difficulty_screen_FINAL {
+            get {
+                object obj = ResourceManager.GetObject("difficulty-screen-FINAL", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Dolphin_Emulator_Screenshot_2022_01_16___17_17_23_21 {
+            get {
+                object obj = ResourceManager.GetObject("Dolphin Emulator Screenshot 2022.01.16 - 17.17.23.21", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Dolphin_Emulator_Screenshot_2022_01_16___17_18_57_08 {
+            get {
+                object obj = ResourceManager.GetObject("Dolphin Emulator Screenshot 2022.01.16 - 17.18.57.08", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap health_bar_final_FINAL_FINAL__easy {
             get {
                 object obj = ResourceManager.GetObject("health-bar-final-FINAL-FINAL--easy", resourceCulture);

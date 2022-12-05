@@ -52,6 +52,8 @@ namespace ContAssessment
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.btnHome = new System.Windows.Forms.Button();
+            this.btnQuit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Health2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Health1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -71,7 +73,7 @@ namespace ContAssessment
             this.lblans1.Location = new System.Drawing.Point(791, 261);
             this.lblans1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblans1.Name = "lblans1";
-            this.lblans1.Size = new System.Drawing.Size(70, 28);
+            this.lblans1.Size = new System.Drawing.Size(57, 21);
             this.lblans1.TabIndex = 0;
             this.lblans1.Text = "label1";
             this.lblans1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblans1_MouseClick);
@@ -85,7 +87,7 @@ namespace ContAssessment
             this.lblans2.Location = new System.Drawing.Point(327, 259);
             this.lblans2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblans2.Name = "lblans2";
-            this.lblans2.Size = new System.Drawing.Size(70, 28);
+            this.lblans2.Size = new System.Drawing.Size(57, 21);
             this.lblans2.TabIndex = 2;
             this.lblans2.Text = "label3";
             this.lblans2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblans2_MouseClick);
@@ -99,7 +101,7 @@ namespace ContAssessment
             this.lblans3.Location = new System.Drawing.Point(327, 375);
             this.lblans3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblans3.Name = "lblans3";
-            this.lblans3.Size = new System.Drawing.Size(70, 28);
+            this.lblans3.Size = new System.Drawing.Size(57, 21);
             this.lblans3.TabIndex = 3;
             this.lblans3.Text = "label4";
             this.lblans3.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblans3_MouseClick);
@@ -114,7 +116,7 @@ namespace ContAssessment
             this.lblQuestion.Location = new System.Drawing.Point(294, 102);
             this.lblQuestion.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblQuestion.Name = "lblQuestion";
-            this.lblQuestion.Size = new System.Drawing.Size(498, 143);
+            this.lblQuestion.Size = new System.Drawing.Size(554, 143);
             this.lblQuestion.TabIndex = 4;
             this.lblQuestion.Text = "label1";
             // 
@@ -135,7 +137,7 @@ namespace ContAssessment
             this.rb1.Location = new System.Drawing.Point(764, 271);
             this.rb1.Margin = new System.Windows.Forms.Padding(5, 2, 5, 2);
             this.rb1.Name = "rb1";
-            this.rb1.Size = new System.Drawing.Size(17, 16);
+            this.rb1.Size = new System.Drawing.Size(14, 13);
             this.rb1.TabIndex = 7;
             this.rb1.TabStop = true;
             this.rb1.UseVisualStyleBackColor = false;
@@ -148,7 +150,7 @@ namespace ContAssessment
             this.rb2.Location = new System.Drawing.Point(300, 271);
             this.rb2.Margin = new System.Windows.Forms.Padding(5, 2, 5, 2);
             this.rb2.Name = "rb2";
-            this.rb2.Size = new System.Drawing.Size(17, 16);
+            this.rb2.Size = new System.Drawing.Size(14, 13);
             this.rb2.TabIndex = 8;
             this.rb2.TabStop = true;
             this.rb2.UseVisualStyleBackColor = false;
@@ -161,7 +163,7 @@ namespace ContAssessment
             this.rb3.Location = new System.Drawing.Point(300, 385);
             this.rb3.Margin = new System.Windows.Forms.Padding(5, 2, 5, 2);
             this.rb3.Name = "rb3";
-            this.rb3.Size = new System.Drawing.Size(17, 16);
+            this.rb3.Size = new System.Drawing.Size(14, 13);
             this.rb3.TabIndex = 9;
             this.rb3.TabStop = true;
             this.rb3.UseVisualStyleBackColor = false;
@@ -176,7 +178,7 @@ namespace ContAssessment
             this.lblTime.Location = new System.Drawing.Point(533, 343);
             this.lblTime.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblTime.Name = "lblTime";
-            this.lblTime.Size = new System.Drawing.Size(0, 54);
+            this.lblTime.Size = new System.Drawing.Size(0, 42);
             this.lblTime.TabIndex = 11;
             // 
             // timer1
@@ -190,9 +192,9 @@ namespace ContAssessment
             this.rb4.AutoSize = true;
             this.rb4.BackColor = System.Drawing.Color.Transparent;
             this.rb4.Location = new System.Drawing.Point(764, 385);
-            this.rb4.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.rb4.Margin = new System.Windows.Forms.Padding(5);
             this.rb4.Name = "rb4";
-            this.rb4.Size = new System.Drawing.Size(17, 16);
+            this.rb4.Size = new System.Drawing.Size(14, 13);
             this.rb4.TabIndex = 12;
             this.rb4.TabStop = true;
             this.rb4.UseVisualStyleBackColor = false;
@@ -207,7 +209,7 @@ namespace ContAssessment
             this.lblans4.Location = new System.Drawing.Point(791, 375);
             this.lblans4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblans4.Name = "lblans4";
-            this.lblans4.Size = new System.Drawing.Size(70, 28);
+            this.lblans4.Size = new System.Drawing.Size(57, 21);
             this.lblans4.TabIndex = 13;
             this.lblans4.Text = "label1";
             this.lblans4.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblans4_MouseClick);
@@ -217,7 +219,7 @@ namespace ContAssessment
             this.Health2.BackgroundImage = global::ContAssessment.Properties.Resources.health_bar_final_FINAL_FINAL__easy__1_life;
             this.Health2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Health2.Location = new System.Drawing.Point(0, -1);
-            this.Health2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Health2.Margin = new System.Windows.Forms.Padding(5);
             this.Health2.Name = "Health2";
             this.Health2.Size = new System.Drawing.Size(1073, 554);
             this.Health2.TabIndex = 18;
@@ -228,7 +230,7 @@ namespace ContAssessment
             this.Health1.BackgroundImage = global::ContAssessment.Properties.Resources.health_bar_final_FINAL_FINAL__easy_2_lives;
             this.Health1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Health1.Location = new System.Drawing.Point(0, -1);
-            this.Health1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Health1.Margin = new System.Windows.Forms.Padding(5);
             this.Health1.Name = "Health1";
             this.Health1.Size = new System.Drawing.Size(1073, 554);
             this.Health1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -240,7 +242,7 @@ namespace ContAssessment
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.BackgroundImage = global::ContAssessment.Properties.Resources.detonation_time_2;
             this.pictureBox1.Location = new System.Drawing.Point(409, 294);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(5);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(346, 52);
             this.pictureBox1.TabIndex = 20;
@@ -256,9 +258,8 @@ namespace ContAssessment
             this.lblHScore.Location = new System.Drawing.Point(534, 472);
             this.lblHScore.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblHScore.Name = "lblHScore";
-            this.lblHScore.Size = new System.Drawing.Size(117, 46);
+            this.lblHScore.Size = new System.Drawing.Size(0, 37);
             this.lblHScore.TabIndex = 21;
-            this.lblHScore.Text = "label1";
             // 
             // lblHQCount
             // 
@@ -270,9 +271,8 @@ namespace ContAssessment
             this.lblHQCount.Location = new System.Drawing.Point(641, 52);
             this.lblHQCount.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblHQCount.Name = "lblHQCount";
-            this.lblHQCount.Size = new System.Drawing.Size(128, 50);
+            this.lblHQCount.Size = new System.Drawing.Size(0, 40);
             this.lblHQCount.TabIndex = 22;
-            this.lblHQCount.Text = "label2";
             // 
             // btnCheck
             // 
@@ -280,7 +280,7 @@ namespace ContAssessment
             this.btnCheck.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCheck.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCheck.Location = new System.Drawing.Point(449, 402);
-            this.btnCheck.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnCheck.Margin = new System.Windows.Forms.Padding(5);
             this.btnCheck.Name = "btnCheck";
             this.btnCheck.Size = new System.Drawing.Size(241, 65);
             this.btnCheck.TabIndex = 23;
@@ -317,6 +317,7 @@ namespace ContAssessment
             this.pictureBox4.Size = new System.Drawing.Size(120, 50);
             this.pictureBox4.TabIndex = 26;
             this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             this.pictureBox4.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox4_MouseClick);
             // 
             // pictureBox5
@@ -330,12 +331,39 @@ namespace ContAssessment
             this.pictureBox5.TabStop = false;
             this.pictureBox5.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox5_MouseClick);
             // 
+            // btnHome
+            // 
+            this.btnHome.BackColor = System.Drawing.Color.Crimson;
+            this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHome.Location = new System.Drawing.Point(930, 501);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.Size = new System.Drawing.Size(125, 41);
+            this.btnHome.TabIndex = 28;
+            this.btnHome.Text = "Home";
+            this.btnHome.UseVisualStyleBackColor = false;
+            // 
+            // btnQuit
+            // 
+            this.btnQuit.BackColor = System.Drawing.Color.Crimson;
+            this.btnQuit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnQuit.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQuit.Location = new System.Drawing.Point(12, 501);
+            this.btnQuit.Name = "btnQuit";
+            this.btnQuit.Size = new System.Drawing.Size(109, 41);
+            this.btnQuit.TabIndex = 29;
+            this.btnQuit.Text = "Quit";
+            this.btnQuit.UseVisualStyleBackColor = false;
+            // 
             // hardRB
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ContAssessment.Properties.Resources.health_bar_final_FINAL_FINAL__easy_2_lives;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.Controls.Add(this.btnQuit);
+            this.Controls.Add(this.btnHome);
             this.Controls.Add(this.btnCheck);
             this.Controls.Add(this.lblHQCount);
             this.Controls.Add(this.lblHScore);
@@ -399,5 +427,7 @@ namespace ContAssessment
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.Button btnHome;
+        private System.Windows.Forms.Button btnQuit;
     }
 }

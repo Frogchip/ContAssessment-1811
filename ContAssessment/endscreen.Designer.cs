@@ -67,13 +67,12 @@ namespace ContAssessment
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("MS Reference Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("MS Reference Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(301, 136);
+            this.label1.Location = new System.Drawing.Point(278, 146);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(166, 26);
+            this.label1.Size = new System.Drawing.Size(276, 55);
             this.label1.TabIndex = 2;
             this.label1.Text = "FINAL SCORE";
             // 
@@ -83,7 +82,7 @@ namespace ContAssessment
             this.lblScore.BackColor = System.Drawing.Color.Transparent;
             this.lblScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblScore.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(255)))), ((int)(((byte)(195)))));
-            this.lblScore.Location = new System.Drawing.Point(368, 193);
+            this.lblScore.Location = new System.Drawing.Point(366, 236);
             this.lblScore.Name = "lblScore";
             this.lblScore.Size = new System.Drawing.Size(76, 25);
             this.lblScore.TabIndex = 3;

@@ -52,6 +52,11 @@
     <Compile Include="difficulty.Designer.cs">
       <DependentUpon>difficulty.cs</DependentUpon>
     </Compile>
+    <Compile Include="dndimages.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dndimages.resx</DependentUpon>
+    </Compile>
     <Compile Include="easyDND.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,11 +100,11 @@
     <Compile Include="Homescreen.Designer.cs">
       <DependentUpon>Homescreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="leaderboard.cs">
+    <Compile Include="lead.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="leaderboard.Designer.cs">
-      <DependentUpon>leaderboard.cs</DependentUpon>
+    <Compile Include="lead.Designer.cs">
+      <DependentUpon>lead.cs</DependentUpon>
     </Compile>
     <Compile Include="mystatic.cs" />
     <Compile Include="normalCB.cs">
@@ -119,6 +124,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="difficulty.resx">
       <DependentUpon>difficulty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dndimages.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>dndimages.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="easyDND.resx">
       <DependentUpon>easyDND.cs</DependentUpon>
@@ -140,6 +149,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Homescreen.resx">
       <DependentUpon>Homescreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lead.resx">
+      <DependentUpon>lead.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="normalCB.resx">
       <DependentUpon>normalCB.cs</DependentUpon>
@@ -205,6 +217,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\italy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\difficulty-screen-FINAL.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dolphin Emulator Screenshot 2022.01.16 - 17.17.23.21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dolphin Emulator Screenshot 2022.01.16 - 17.18.57.08.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\no-health FINAL.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
