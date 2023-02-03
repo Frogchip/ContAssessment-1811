@@ -16,7 +16,7 @@ namespace ContAssessment
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new difficulty());
+            Application.Run(new Homescreen());
         }
     }
 }

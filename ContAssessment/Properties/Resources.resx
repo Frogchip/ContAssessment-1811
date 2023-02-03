@@ -118,26 +118,44 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="full-armour-and-border-FINAL" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\full-armour-and-border-FINAL.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="half-armour-with-border" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\half-armour-with-border.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FHNA" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FHNA.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="no-health" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\no-health.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="FHFA png" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FHFA png.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LHNA" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LHNA.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bomb-2-final" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bomb-2-final.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="health-bar-final-FINAL-FINAL--easy---4-lives" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\health-bar-final-FINAL-FINAL--easy---4-lives.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Dolphin Emulator Screenshot 2022.01.16 - 17.18.57.08" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Dolphin Emulator Screenshot 2022.01.16 - 17.18.57.08.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FHHA" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FHHA.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="full-health-and-border-FINAL" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\full-health-and-border-FINAL.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FHFA" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FHFA.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="detonation-time-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\detonation-time-2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="health-bar-final-FINAL-FINAL--easy-2-lives" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\health-bar-final-FINAL-FINAL--easy-2-lives.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="italy" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\italy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="bangladesh" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bangladesh.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="health-bar-final-FINAL-FINAL--easy" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\health-bar-final-FINAL-FINAL--easy.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="detonation-time" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\detonation-time.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="health-bar-final-FINAL-FINAL--easy---3-lives" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\health-bar-final-FINAL-FINAL--easy---3-lives.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -145,22 +163,52 @@
   <data name="difficulty-screen-FINAL" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\difficulty-screen-FINAL.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="south africa" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\south africa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="detonation-time" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\detonation-time.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bangladesh" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bangladesh.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="health-bar-final-FINAL-FINAL--easy-2-lives" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\health-bar-final-FINAL-FINAL--easy-2-lives.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="columbia" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\columbia.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="health-bar-final-FINAL-FINAL--easy" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\health-bar-final-FINAL-FINAL--easy.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="health-bar-final-FINAL-FINAL--easy--1-life" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\health-bar-final-FINAL-FINAL--easy--1-life.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="health-bar-final-FINAL-FINAL--easy---4-lives" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\health-bar-final-FINAL-FINAL--easy---4-lives.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="italy" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\italy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FHHA-png" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FHHA-png.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HHNA" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HHNA.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="UK" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\UK1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="south africa" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\south africa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Dolphin Emulator Screenshot 2022.01.16 - 17.17.23.21" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Dolphin Emulator Screenshot 2022.01.16 - 17.17.23.21.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Dolphin Emulator Screenshot 2022.01.16 - 17.18.57.08" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Dolphin Emulator Screenshot 2022.01.16 - 17.18.57.08.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="boris" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\boris1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="liz truss" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\liz truss1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="rishi" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\rishi1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="theresa" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\theresa1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

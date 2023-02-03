@@ -81,6 +81,11 @@ namespace ContAssessment
                         return;
                     }
                 }
+                else
+                {
+                    MessageBox.Show("This username is not associated with any account - please try again.");
+                }
+
             }
 
             if (registered)
@@ -182,6 +187,14 @@ namespace ContAssessment
         private void button1_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void btnAdmin_Click(object sender, EventArgs e)
+        {
+            globaldata.Admin++;
+            difficulty diff1 = new difficulty();
+            diff1.Show();
+            this.Hide();
         }
     }
 }

@@ -38,9 +38,29 @@ namespace ContAssessment
             {
                 this.Hide();
             }
+            if (globaldata.Admin == 1)
+            {
+                globaldata.NLife = 99999;
+                globaldata.NTimeLeft = 99999;
+                if (lblans1.Text == questionPartsArray[7])
+                {
+                    lblans1.ForeColor = Color.Green;
+                }
+                if (lblans2.Text == questionPartsArray[7])
+                {
+                    lblans2.ForeColor = Color.Green;
+                }
+                if (lblans3.Text == questionPartsArray[7])
+                {
+                    lblans3.ForeColor = Color.Green;
+                }
+                if (lblans4.Text == questionPartsArray[7])
+                {
+                    lblans4.ForeColor = Color.Green;
+                }
+            }
             lblNScore.Text = globaldata.Score + "";
             lblNQCount.Text = "";
-            globaldata.ETimeLeft = 16;
             lblTime.Visible = true;
             timer1.Start();
         }

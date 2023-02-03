@@ -35,7 +35,6 @@ namespace ContAssessment
                 Health3.Visible = true;
             }
             lblNScore.Text = globaldata.Score + "";
-            globaldata.NTimeLeft = 13;
             lblNTime.Visible = true;
             timer1.Start();
         }

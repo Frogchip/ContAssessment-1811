@@ -48,11 +48,40 @@ namespace ContAssessment
                 Health4.Visible = false;
                 Health5.Visible = true;
             }
+            if (globaldata.Admin == 1)
+            {
+                if (lblans1.Text == questionPartsArray[7])
+                {
+                    lblans1.ForeColor = Color.Green;
+                }
+                if (lblans2.Text == questionPartsArray[7])
+                {
+                    lblans2.ForeColor = Color.Green;
+                }
+                if (lblans3.Text == questionPartsArray[7])
+                {
+                    lblans3.ForeColor = Color.Green;
+                }
+                if (lblans4.Text == questionPartsArray[7])
+                {
+                    lblans4.ForeColor = Color.Green;
+                }
+            }
+            timer1.Stop();
+            if (globaldata.Admin != 1)
+            {
+
+                timer1.Enabled = true;
+                timer1.Start();
+                lblTime.Visible = true;
+            }
+            else
+            {
+                lblTime.Text = "∞";
+            }
+            lblEQCount.Text = globaldata.ECount + "/20";
+            lblTime.Text = globaldata.ETimeLeft + "";
             lblEScore.Text = globaldata.Score + "";
-            lblEQCount.Text = "";
-            globaldata.ETimeLeft = 16;
-            lblTime.Visible = true;
-            timer1.Start();
         }
         internal void ShowQuestion(string ShowQdata)
         {
@@ -134,25 +163,40 @@ namespace ContAssessment
 
         private void timer1_Tick_1(object sender, EventArgs e)
         {
-            lblEQCount.Text = globaldata.ECount + "/20";
-            lblEScore.Text = globaldata.Score + "";
-            lblTime.Visible = true;
-            timer1.Start();
             globaldata.ETimeLeft = globaldata.ETimeLeft - 1;
-            lblTime.Text = globaldata.ETimeLeft + "";
             if (globaldata.ETimeLeft == 5)
             {
-                //System.Media.SoundPlayer player = new System.Media.SoundPlayer(@"c:\mywavfile.wav");
-                //player.Play();
+                System.Media.SoundPlayer player = new System.Media.SoundPlayer(@"OneDrive - C2k/Y13SSD/sfx/Countdown/atomchick_five22.wav");
+                player.Play();
+            }
+            if (globaldata.ETimeLeft == 4)
+            {
+                System.Media.SoundPlayer player = new System.Media.SoundPlayer(@"/OneDrive - C2k/Y13SSD/sfx/Countdown/atomchick_four22.wav");
+                player.Play();
+            }
+            if (globaldata.ETimeLeft == 3)
+            {
+                System.Media.SoundPlayer player = new System.Media.SoundPlayer(@"/OneDrive - C2k/Y13SSD/sfx/Countdown/atomchick_three2.wav");
+                player.Play();
+            }
+            if (globaldata.ETimeLeft == 2)
+            {
+                System.Media.SoundPlayer player = new System.Media.SoundPlayer(@"/OneDrive - C2k/Y13SSD/sfx/Countdown/atomchick_two22_.wav");
+                player.Play();
+            }
+            if (globaldata.ETimeLeft == 1)
+            {
+                System.Media.SoundPlayer player = new System.Media.SoundPlayer(@"/OneDrive - C2k/Y13SSD/sfx/Countdown/atomchick_one22_.wav");
+                player.Play();
             }
             if (globaldata.ETimeLeft == 0)
             {
-                //System.Media.SoundPlayer player = new System.Media.SoundPlayer(@"c:\mywavfile.wav");
-                //player.Play();
+                System.Media.SoundPlayer player = new System.Media.SoundPlayer(@"/OneDrive - C2k/Y13SSD/sfx/Countdown/atomchick_zero22.wav");
+                player.Play();
                 lblTime.Visible = false;
                 globaldata.ECount++;
-                MessageBox.Show("Out of time!");
                 timer1.Stop();
+                MessageBox.Show("Out of time!");
                 this.Hide();
                 globaldata.ELife = globaldata.ELife + 1;
                 globaldata.Score--;
@@ -166,39 +210,6 @@ namespace ContAssessment
                 }
             }
         }
-
-        private void pictureBox5_MouseClick(object sender, MouseEventArgs e)
-        {
-            rb1.Checked = true;
-            rb2.Checked = false;
-            rb3.Checked = false;
-            rb4.Checked = false;
-        }
-
-        private void pictureBox4_MouseClick(object sender, MouseEventArgs e)
-        {
-            rb1.Checked = false;
-            rb2.Checked = true;
-            rb3.Checked = false;
-            rb4.Checked = false;
-        }
-
-        private void pictureBox3_MouseClick(object sender, MouseEventArgs e)
-        {
-            rb1.Checked = false;
-            rb2.Checked = false;
-            rb3.Checked = true;
-            rb4.Checked = false;
-        }
-
-        private void pictureBox2_MouseClick(object sender, MouseEventArgs e)
-        {
-            rb1.Checked = false;
-            rb2.Checked = false;
-            rb3.Checked = false;
-            rb4.Checked = true;
-        }
-
         private void lblans1_MouseClick(object sender, MouseEventArgs e)
         {
             rb1.Checked = true;
@@ -230,7 +241,37 @@ namespace ContAssessment
             rb3.Checked = false;
             rb4.Checked = true;
         }
+        private void qBox1_MouseClick(object sender, MouseEventArgs e)
+        {
+            rb1.Checked = true;
+            rb2.Checked = false;
+            rb3.Checked = false;
+            rb4.Checked = false;
+        }
 
+        private void qBox2_MouseClick(object sender, MouseEventArgs e)
+        {
+            rb1.Checked = false;
+            rb2.Checked = true;
+            rb3.Checked = false;
+            rb4.Checked = false;
+        }
+
+        private void qBox3_MouseClick(object sender, MouseEventArgs e)
+        {
+            rb1.Checked = false;
+            rb2.Checked = false;
+            rb3.Checked = true;
+            rb4.Checked = false;
+        }
+
+        private void qBox4_MouseClick(object sender, MouseEventArgs e)
+        {
+            rb1.Checked = false;
+            rb2.Checked = false;
+            rb3.Checked = false;
+            rb4.Checked = true;
+        }
         private void btnQuit_Click(object sender, EventArgs e)
         {
             Close();
@@ -244,10 +285,14 @@ namespace ContAssessment
             this.Hide();
             diff1.Show();
         }
-
         private void Health1_Click(object sender, EventArgs e)
         {
 
         }
+        private void lblQuestion_Click(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }

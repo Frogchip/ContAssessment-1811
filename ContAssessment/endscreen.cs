@@ -53,5 +53,25 @@ namespace ContAssessment
             this.Hide();
             diff1.Show();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblFailed_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblGold_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblPlat_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

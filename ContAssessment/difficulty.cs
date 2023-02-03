@@ -17,24 +17,10 @@ namespace ContAssessment
             InitializeComponent();
             lblnocheck.Visible = false;
         }
-
-        private void cbEasy_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cbNormal_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cbHard_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnStart_Click(object sender, EventArgs e)
         {
+            //System.Media.SoundPlayer player = new System.Media.SoundPlayer("");
+            //player.Play();
             if (cbEasy.Checked == false || cbNormal.Checked == false || cbHard.Checked == false)
             {
                 lblnocheck.Visible = true;
@@ -49,28 +35,46 @@ namespace ContAssessment
 
                 for (int i = 0; i < globaldata.EQCount; i++)
                 {
-                    if (globaldata.ELife == 5)
+                    if (globaldata.ELife > 4)
                     {
                         break;
                     }
-                    var b = rando.Next(1, 3);
-                    if (b == 1)
+                    var b = rando.Next(1, 9);
+                    if (b == 1 || b == 2 || b == 3)
                     {
+                        globaldata.ETimeLeft = 16;
+                        globaldata.Score += 1;
                         easyRB RB1 = new easyRB();
                         this.Hide();
                         RB1.ShowQuestion(random[i]);
                         RB1.ShowDialog();
-                        globaldata.ETimeLeft = 16;
-                        globaldata.Score += 1;
                     }
-                    if (b == 2)
+                    if (b == 4 || b == 5 || b == 6)
                     {
+                        globaldata.ETimeLeft = 8;
+                        globaldata.Score += 1;
                         easyCB CB1 = new easyCB();
                         this.Hide();
                         CB1.ShowQuestion(random[i]);
                         CB1.ShowDialog();
+
+                    }
+                    if (b == 7)
+                    {
+                        globaldata.ETimeLeft = 6;
+                        globaldata.Score += 1;
+                        easybomb EB1 = new easybomb();
+                        this.Hide();
+                        EB1.ShowDialog();
+
+                    }
+                    if (b == 8)
+                    {
                         globaldata.ETimeLeft = 16;
                         globaldata.Score += 1;
+                        easyDND DND1 = new easyDND();
+                        this.Hide();
+                        DND1.ShowDialog();
                     }
                 }
                 globaldata.Score--;
@@ -92,26 +96,75 @@ namespace ContAssessment
                     {
                         break;
                     }
-                    var b = rando.Next(1, 3);
+                    var b = rando.Next(1, 7);
 
-                    if (b == 1)
+                    if (b == 1 || b == 2)
                     {
+                        if (globaldata.Admin == 1)
+                        {
+                            globaldata.NTimeLeft = 99999;
+                            globaldata.Score += 1;
+                        }
+                        else
+                        {
+                            globaldata.NTimeLeft = 13;
+                            globaldata.Score += 1;
+                        }
                         normalRB N1 = new normalRB();
                         this.Hide();
                         N1.ShowQuestion(random[i]);
                         N1.ShowDialog();
-                        globaldata.NTimeLeft = 13;
-                        globaldata.Score += 1;
                     }
-                    if (b == 2)
+                    if (b == 3 || b == 4)
                     {
+                        if (globaldata.Admin == 1)
+                        {
+                            globaldata.NTimeLeft = 99999;
+                            globaldata.Score += 1;
+                        }
+                        else
+                        {
+                            globaldata.NTimeLeft = 13;
+                            globaldata.Score += 1;
+                        }
                         normalCB C1 = new normalCB();
                         this.Hide();
                         C1.ShowQuestion(random[i]);
                         C1.ShowDialog();
-                        globaldata.NTimeLeft = 13;
-                        globaldata.Score += 1;
                     }
+                    if (b == 5)
+                    {
+                        if (globaldata.Admin == 1)
+                        {
+                            globaldata.NTimeLeft = 99999;
+                            globaldata.Score += 1;
+                        }
+                        else
+                        {
+                            globaldata.NTimeLeft = 4;
+                            globaldata.Score += 1;
+                        }
+                        normalbomb NB1 = new normalbomb();
+                        this.Hide();
+                        NB1.ShowDialog();
+                    }
+                    if (b == 6)
+                    {
+                        if (globaldata.Admin == 1)
+                        {
+                            globaldata.NTimeLeft = 99999;
+                            globaldata.Score += 1;
+                        }
+                        else
+                        {
+                            globaldata.NTimeLeft = 13;
+                            globaldata.Score += 1;
+                        }
+                        normalDND DND1 = new normalDND();
+                        this.Hide();
+                        DND1.ShowDialog();
+                    }
+
                 }
                 globaldata.Score--;
                 endscreen end1 = new endscreen();
@@ -132,24 +185,72 @@ namespace ContAssessment
                     {
                         break;
                     }
-                    var b = rando.Next(1, 3);  
-                    if (b == 1)
+                    var b = rando.Next(1, 8);  
+                    if (b == 1 || b == 2)
                     {
+                        if (globaldata.Admin == 1)
+                        {
+                            globaldata.HTimeLeft = 9999;
+                            globaldata.Score += 1;
+                        }
+                        else
+                        {
+                            globaldata.HTimeLeft = 11;
+                            globaldata.Score += 1;
+                        }
                         hardRB HR1 = new hardRB();
                         this.Hide();
                         HR1.ShowQuestion(random[i]);
                         HR1.ShowDialog();
-                        globaldata.HTimeLeft = 11;
-                        globaldata.Score += 1;
                     }
-                    else
+                    if (b == 3 || b == 4)
                     {
+                        if (globaldata.Admin == 1)
+                        {
+                            globaldata.HTimeLeft = 9999;
+                            globaldata.Score += 1;
+                        }
+                        else
+                        {
+                            globaldata.HTimeLeft = 11;
+                            globaldata.Score += 1;
+                        }
                         hardCB HC1 = new hardCB();
                         this.Hide();
                         HC1.ShowQuestion(random[i]);
                         HC1.ShowDialog();
-                        globaldata.HTimeLeft = 11;
-                        globaldata.Score += 1;
+                    }
+                    if (b == 5 || b == 6)
+                    {
+                        if (globaldata.Admin == 1)
+                        {
+                            globaldata.HTimeLeft = 9999;
+                            globaldata.Score += 1;
+                        }
+                        else
+                        {
+                            globaldata.HTimeLeft = 3;
+                            globaldata.Score += 1;
+                        }
+                        hardbomb HB1 = new hardbomb();
+                        this.Hide();
+                        HB1.ShowDialog();
+                    }
+                    if (b == 7)
+                    {
+                        if (globaldata.Admin == 1)
+                        {
+                            globaldata.HTimeLeft = 99999;
+                            globaldata.Score += 1;
+                        }
+                        else
+                        {
+                            globaldata.HTimeLeft = 13;
+                            globaldata.Score += 1;
+                        }
+                        hardDND DND1 = new hardDND();
+                        this.Hide();
+                        DND1.ShowDialog();
                     }
                 }
                 globaldata.Score--;
@@ -168,7 +269,9 @@ namespace ContAssessment
             lblnocheck.Visible = false;
 
             lblRules.ForeColor = Color.GreenYellow;
-            lblRules.Text = "You will not be challenged.\nLives: 5\n" + "Timer: 10 seconds\n" + "Questions: Easy\n";
+            lblRules.Text = "You will not be challenged.\n";
+            //System.Media.SoundPlayer player = new System.Media.SoundPlayer("");
+            //player.Play();
         }        
 
         private void cbNormal_Click(object sender, EventArgs e)
@@ -179,7 +282,9 @@ namespace ContAssessment
             lblnocheck.Visible = false;
 
             lblRules.ForeColor = Color.Orange;
-            lblRules.Text = "Your speed of answering questions will be tested.\nLives: 3\n" + "Timer: 8 seconds\nQuestions: Intermediate\n";
+            lblRules.Text = "Your speed of answering questions will be tested.\n";
+            //System.Media.SoundPlayer player = new System.Media.SoundPlayer("");
+            //player.Play();
         }
 
         private void cbHard_Click(object sender, EventArgs e)
@@ -190,23 +295,30 @@ namespace ContAssessment
             lblnocheck.Visible = false;
 
             lblRules.ForeColor = Color.Red;
-            lblRules.Text = "You will not survive.\nLives: 2\n" + "5 seconds\nQuestions: Advanced\n";
+            lblRules.Text = "You will not survive.\n";
+            //System.Media.SoundPlayer player = new System.Media.SoundPlayer("");
+            //player.Play();
+        }
+        private void btnSignOut_Click(object sender, EventArgs e)
+        {
+            Homescreen H1 = new Homescreen();
+            H1.Show();
+            this.Hide();
+        }
+
+        private void btnQuit_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void cbNormal_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
 
         private void difficulty_Load(object sender, EventArgs e)
         {
 
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnSignOut_Click(object sender, EventArgs e)
-        {
-            Homescreen H1 = new Homescreen();
-            this.Hide();
         }
     }
 }

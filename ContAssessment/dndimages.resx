@@ -121,6 +121,9 @@
   <data name="Bangladesh" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\Bangladesh.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="boris" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\boris.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Columbia" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\Columbia.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -160,13 +163,28 @@
   <data name="Italy" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\Italy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="liz_truss" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\liz truss.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Luxembourg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\Luxembourg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="no_health" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\no-health.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="no_health_FINAL" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\no-health FINAL.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="rishi" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\rishi.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="South_Africa" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\South Africa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="theresa" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\theresa.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="UK" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\UK.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

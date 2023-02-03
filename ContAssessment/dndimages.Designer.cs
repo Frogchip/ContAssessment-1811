@@ -73,6 +73,16 @@ namespace ContAssessment {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap boris {
+            get {
+                object obj = ResourceManager.GetObject("boris", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Columbia {
             get {
                 object obj = ResourceManager.GetObject("Columbia", resourceCulture);
@@ -126,16 +136,6 @@ namespace ContAssessment {
         internal static System.Drawing.Bitmap Dolphin_Emulator_Screenshot_2022_01_16___17_18_57_08 {
             get {
                 object obj = ResourceManager.GetObject("Dolphin_Emulator_Screenshot_2022_01_16___17_18_57_08", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap health_bar_final_FINAL_FINAL__easy {
-            get {
-                object obj = ResourceManager.GetObject("health_bar_final_FINAL_FINAL__easy", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -203,6 +203,26 @@ namespace ContAssessment {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap liz_truss {
+            get {
+                object obj = ResourceManager.GetObject("liz_truss", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Luxembourg {
+            get {
+                object obj = ResourceManager.GetObject("Luxembourg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap no_health {
             get {
                 object obj = ResourceManager.GetObject("no_health", resourceCulture);
@@ -223,9 +243,39 @@ namespace ContAssessment {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap rishi {
+            get {
+                object obj = ResourceManager.GetObject("rishi", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap South_Africa {
             get {
                 object obj = ResourceManager.GetObject("South_Africa", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap theresa {
+            get {
+                object obj = ResourceManager.GetObject("theresa", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap UK {
+            get {
+                object obj = ResourceManager.GetObject("UK", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

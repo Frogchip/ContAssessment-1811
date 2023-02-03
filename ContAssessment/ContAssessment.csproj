@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="bomblocations.cs" />
     <Compile Include="difficulty.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -62,6 +63,12 @@
     </Compile>
     <Compile Include="easyDND.Designer.cs">
       <DependentUpon>easyDND.cs</DependentUpon>
+    </Compile>
+    <Compile Include="easybomb.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="easybomb.Designer.cs">
+      <DependentUpon>easybomb.cs</DependentUpon>
     </Compile>
     <Compile Include="easyRB.cs">
       <SubType>Form</SubType>
@@ -82,11 +89,23 @@
       <DependentUpon>endscreen.cs</DependentUpon>
     </Compile>
     <Compile Include="globaldata.cs" />
+    <Compile Include="hardbomb.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="hardbomb.Designer.cs">
+      <DependentUpon>hardbomb.cs</DependentUpon>
+    </Compile>
     <Compile Include="hardCB.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="hardCB.Designer.cs">
       <DependentUpon>hardCB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="hardDND.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="hardDND.Designer.cs">
+      <DependentUpon>hardDND.cs</DependentUpon>
     </Compile>
     <Compile Include="hardRB.cs">
       <SubType>Form</SubType>
@@ -113,6 +132,12 @@
     <Compile Include="normalCB.Designer.cs">
       <DependentUpon>normalCB.cs</DependentUpon>
     </Compile>
+    <Compile Include="normalDND.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="normalDND.Designer.cs">
+      <DependentUpon>normalDND.cs</DependentUpon>
+    </Compile>
     <Compile Include="normalRB.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,6 +147,12 @@
     <Compile Include="Playerdata.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="normalbomb.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="normalbomb.Designer.cs">
+      <DependentUpon>normalbomb.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="difficulty.resx">
       <DependentUpon>difficulty.cs</DependentUpon>
     </EmbeddedResource>
@@ -132,6 +163,9 @@
     <EmbeddedResource Include="easyDND.resx">
       <DependentUpon>easyDND.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="easybomb.resx">
+      <DependentUpon>easybomb.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="easyRB.resx">
       <DependentUpon>easyRB.cs</DependentUpon>
     </EmbeddedResource>
@@ -141,8 +175,14 @@
     <EmbeddedResource Include="endscreen.resx">
       <DependentUpon>endscreen.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="hardbomb.resx">
+      <DependentUpon>hardbomb.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="hardCB.resx">
       <DependentUpon>hardCB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="hardDND.resx">
+      <DependentUpon>hardDND.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="hardRB.resx">
       <DependentUpon>hardRB.cs</DependentUpon>
@@ -155,6 +195,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="normalCB.resx">
       <DependentUpon>normalCB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="normalDND.resx">
+      <DependentUpon>normalDND.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="normalRB.resx">
       <DependentUpon>normalRB.cs</DependentUpon>
@@ -169,6 +212,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="normalbomb.resx">
+      <DependentUpon>normalbomb.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -232,6 +278,78 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\no-health FINAL.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\luxembourg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Luxembourg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UK.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UK1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bomb-2-final.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\full-armour-and-border-FINAL.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\half-armour-with-border.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\full-health-and-border-FINAL.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FHFA.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FHNA.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FHHA.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FHHA-png.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FHFA png.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HHNA.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LHNA.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\liz truss.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boris.jfif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boris.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rishi.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\theresa.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boris1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\liz truss1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rishi1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\theresa1.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -240,10 +240,10 @@ namespace ContAssessment
             // pictureBox6
             // 
             this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox6.BackgroundImage = global::ContAssessment.Properties.Resources.detonation_time_2;
-            this.pictureBox6.Location = new System.Drawing.Point(397, 263);
+            this.pictureBox6.Image = global::ContAssessment.Properties.Resources.detonation_time;
+            this.pictureBox6.Location = new System.Drawing.Point(395, 252);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(333, 44);
+            this.pictureBox6.Size = new System.Drawing.Size(335, 44);
             this.pictureBox6.TabIndex = 17;
             this.pictureBox6.TabStop = false;
             // 
@@ -271,7 +271,6 @@ namespace ContAssessment
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BackgroundImage = global::ContAssessment.Properties.Resources.health_bar_final_FINAL_FINAL__easy;
             this.pictureBox1.Location = new System.Drawing.Point(322, 207);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(100, 50);
@@ -282,7 +281,6 @@ namespace ContAssessment
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.BackgroundImage = global::ContAssessment.Properties.Resources.health_bar_final_FINAL_FINAL__easy;
             this.pictureBox2.Location = new System.Drawing.Point(706, 207);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(110, 50);
@@ -293,7 +291,6 @@ namespace ContAssessment
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox3.BackgroundImage = global::ContAssessment.Properties.Resources.health_bar_final_FINAL_FINAL__easy;
             this.pictureBox3.Location = new System.Drawing.Point(322, 314);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(100, 50);
@@ -304,7 +301,6 @@ namespace ContAssessment
             // pictureBox4
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox4.BackgroundImage = global::ContAssessment.Properties.Resources.health_bar_final_FINAL_FINAL__easy;
             this.pictureBox4.Location = new System.Drawing.Point(706, 314);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(110, 50);

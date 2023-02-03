@@ -26,6 +26,26 @@ namespace ContAssessment
                 Health1.Visible = false;
                 Health2.Visible = true;
             }
+            if (globaldata.Admin == 1)
+            {
+                globaldata.HTimeLeft = 99999;
+                if (lblans1.Text == questionPartsArray[7])
+                {
+                    lblans1.ForeColor = Color.Green;
+                }
+                if (lblans2.Text == questionPartsArray[7])
+                {
+                    lblans2.ForeColor = Color.Green;
+                }
+                if (lblans3.Text == questionPartsArray[7])
+                {
+                    lblans3.ForeColor = Color.Green;
+                }
+                if (lblans4.Text == questionPartsArray[7])
+                {
+                    lblans4.ForeColor = Color.Green;
+                }
+            }
             lblHScore.Text = globaldata.Score + "";
             globaldata.HTimeLeft = 11;
             lblTime.Visible = true;
@@ -68,8 +88,8 @@ namespace ContAssessment
             {
                 lblTime.Visible = false;
                 MessageBox.Show("Out of time!");
-                globaldata.HLife -= 2;
-                timer1.Stop();
+                globaldata.HLife++;
+                globaldata.Score--;
                 this.Hide();
                 globaldata.HLife = globaldata.HLife + 1;
                 if (globaldata.HLife == 1)
@@ -101,8 +121,8 @@ namespace ContAssessment
                 timer1.Stop();
                 lblTime.Visible = false;
                 MessageBox.Show("Incorrect!");
-                globaldata.Score-=2;
-                globaldata.HLife = globaldata.HLife + 1;
+                globaldata.Score--;
+                globaldata.HLife++;
                 this.Hide();
                 if (globaldata.HLife == 1)
                 {
@@ -158,16 +178,16 @@ namespace ContAssessment
 
         private void pictureBox5_MouseClick(object sender, MouseEventArgs e)
         {
-            cb1.Checked = true;
-            cb2.Checked = false;
+            cb1.Checked = false;
+            cb2.Checked = true;
             cb3.Checked = false;
             cb4.Checked = false;
         }
 
         private void pictureBox2_MouseClick(object sender, MouseEventArgs e)
         {
-            cb1.Checked = false;
-            cb2.Checked = true;
+            cb1.Checked = true;
+            cb2.Checked = false;
             cb3.Checked = false;
             cb4.Checked = false;
         }
@@ -198,16 +218,16 @@ namespace ContAssessment
 
         private void lblans1_MouseClick(object sender, MouseEventArgs e)
         {
-            cb1.Checked = false;
-            cb2.Checked = true;
+            cb1.Checked = true;
+            cb2.Checked = false;
             cb3.Checked = false;
             cb4.Checked = false;
         }
 
         private void lblans2_MouseClick(object sender, MouseEventArgs e)
         {
-            cb1.Checked = true;
-            cb2.Checked = false;
+            cb1.Checked = false;
+            cb2.Checked = true;
             cb3.Checked = false;
             cb4.Checked = false;
         }
